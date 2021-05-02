@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour 
+{
     [SerializeField] private int speed;
     [SerializeField] private int jump;
     private bool ground;
@@ -48,6 +50,14 @@ public class PlayerController : MonoBehaviour {
         if(other.tag == "ladder"){
             rb.gravityScale = 1;
             cc.isTrigger = false;
+        }
+    }
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Respawn")
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }
