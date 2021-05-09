@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 3498774900646637326}
   - component: {fileID: 3498774900646637323}
   - component: {fileID: 3498774900646637320}
-  - component: {fileID: 3498774900646637322}
   m_Layer: 0
-  m_Name: "\u0420\u0435\u0441\u0443\u0440\u0441 4hdpi"
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,18 +130,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3498774900646637322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3498774900646637327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c419b93fe0143f49a6b3884ff0092a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  jump: 5
-  joystick: {fileID: 0}
