@@ -18,7 +18,7 @@ public class SetSkin : MonoBehaviour
         UpdateSkin(index);
     }
 
-    public void UpdateSkin(int index){
+    public void UpdateSkin (int index){
         Player1.sprite = Player1Sprite [index];
         Player2.sprite = Player2Sprite [index];
     }

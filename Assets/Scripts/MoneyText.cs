@@ -10,11 +10,10 @@ public class MoneyText : MonoBehaviour
 
     void Start(){
         text = GetComponent<Text>();
-        /*Money = PlayerPrefs.GetInt("money");*/
+        Money = PlayerPrefs.GetInt("money", Money);
     }
 
     void Update(){
         text.text = Money.ToString();
-        /*Money = PlayerPrefs.SetInt();*/
     }
 }

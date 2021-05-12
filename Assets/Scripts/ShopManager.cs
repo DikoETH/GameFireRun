@@ -6,15 +6,15 @@ using UnityEngine.UI;
 public class ShopManager : MonoBehaviour
 {
     private int index;
+    private int indexNow;
     [SerializeField] private SetSkin setSkin;
     [SerializeField] private Text priceText;
     [SerializeField] private int[] price;
 
     private void Start(){
         index = setSkin.index;
-        /*priceText.text = price[index].ToString();*/
-        DetectionPriceSkin();
-        
+        indexNow = index;
+        //Skin();
     }
 
     public void SkinMinus(){
@@ -25,8 +25,8 @@ public class ShopManager : MonoBehaviour
         {
            index = 0; 
         }
+        //Skin();
         setSkin.UpdateSkin(index);
-        DetectionPriceSkin();
         PlayerPrefs.SetInt("index", index);
     }
 
@@ -38,21 +38,42 @@ public class ShopManager : MonoBehaviour
         {
            index = 5; 
         }
+        /*Skin();*/
         setSkin.UpdateSkin(index);
-        DetectionPriceSkin();
         PlayerPrefs.SetInt("index", index);
     }
 
-    private void DetectionPriceSkin(){
-        if(MoneyText.Money >= price[index]){
+    /*private void Skin() {
+        setSkin.UpdateSkin(index);
+        priceText.text = price [index].ToString ();
+        if (MoneyText.Money >= price [index])
             priceText.color = Color.green;
-        }
-        else if(MoneyText.Money < price[index])
-        {
+        else if (MoneyText.Money < price [index])
             priceText.color = Color.red;
+        if (indexNow == index) {
+            priceText.color = Color.yellow;
+            priceText.text = "Selection";
+        } else if (PlayerPrefs.GetInt ("" + index.ToString ()) == 1 || index == 0) {
+            priceText.color = Color.blue;
+            priceText.text = "Select";
         }
-    }
+    }*/
 
-    public void BuySkin(){
-    }
+    /*public void BuySkin () {
+        Skin ();
+        if (PlayerPrefs.GetInt ("" + index.ToString ()) == 1 || index == 0) {
+            PlayerPrefs.SetInt ("index", index);
+            priceText.color = Color.yellow;
+            priceText.text = "Selection";
+            indexNow = index;
+        } else if (PlayerPrefs.GetInt ("" + index.ToString ()) == 0) {
+            if (MoneyText.Money >= price [index]) {
+                MoneyText.Money -= price [index];
+                priceText.text = price [index].ToString ();
+                PlayerPrefs.SetInt ("money", MoneyText.Money);
+                PlayerPrefs.SetInt ("" + index.ToString (), 1);
+            }
+            Skin();
+        }
+    }*/
 }
