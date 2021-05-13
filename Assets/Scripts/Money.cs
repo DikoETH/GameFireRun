@@ -5,7 +5,7 @@ using UnityEngine;
 public class Money : MonoBehaviour
 {
     void Start(){
-        
+
     }
 
     void Update(){
