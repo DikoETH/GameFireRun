@@ -26,9 +26,9 @@ public class Buy2 : MonoBehaviour
 
     public void BuySkins()
     {
-        if (MoneyText.Money >= 700)
+        if (MoneyText.Money >= 10)
         {
-            MoneyText.Money -= 700;
+            MoneyText.Money -= 10;
             PlayerPrefs.SetInt("money", MoneyText.Money);
             BuySkin = 2;
             PlayerPrefs.GetInt("BuySkin", BuySkin);

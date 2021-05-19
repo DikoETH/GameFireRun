@@ -10,5 +10,13 @@ public class WatchPlayer : MonoBehaviour {
         transform.Translate(direction.normalized * speed);
     }
 
-
+    public void StopCamera()
+    {
+        speed = 0;
+    }
+    
+    public void StartCamera()
+    {
+        speed = (float)0.015;
+    }
 }
