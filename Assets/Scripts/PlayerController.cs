@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private CapsuleCollider2D cc;
     [SerializeField] private Joystick joystick;
+    public GameObject menuContainer;
 
     private void Start () {
         rb = GetComponent<Rigidbody2D> ();
@@ -57,7 +58,8 @@ public class PlayerController : MonoBehaviour
     {
         if(other.tag == "Respawn")
         {
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(1);
+            menuContainer.SetActive(true);
         }
     }
 }
